@@ -2,12 +2,12 @@ NAME=rush-02
 CC=cc
 CFLAGS=-Wall -Wextra -Werror
 
-fclean:
-	rm -f $(NAME)
+all: $(NAME)
 
 $(NAME):
 	$(CC) $(CFLAGS) *.c
 
-all: $(NAME)
+fclean:
+	rm -f $(NAME)
 
 re: fclean all
