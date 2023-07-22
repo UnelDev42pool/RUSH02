@@ -6,7 +6,7 @@
 /*   By: edi-iori <edi-iori@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 08:49:53 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 15:20:52 by edi-iori         ###   ########lyon.fr   */
+/*   Updated: 2023/07/22 16:10:08 by edi-iori         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	main(int argc, char **argv)
 	test[30].value = "million";
 	test[31].number = 1000000000;
 	test[31].value = "billion";
-	print_number(4442, test, 32);
+	print_number(424242, test, 32);
 	// int		value;
 	// char	*dict_file;
 
