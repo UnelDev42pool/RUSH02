@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft.h                                               :+:      :+:    :+:   */
+/*   print_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edi-iori <edi-iori@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/22 09:22:51 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 14:25:20 by edi-iori         ###   ########lyon.fr   */
+/*   Created: 2023/07/22 14:11:33 by edi-iori          #+#    #+#             */
+/*   Updated: 2023/07/22 15:25:44 by edi-iori         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H
-# define FT_H
+#include "ft.h"
+#include <stdio.h>
+#include <unistd.h>
 
-typedef struct s_dictionary
+void print_number(unsigned int num, t_dictionary *dictionary, int dictionary_len)
 {
-	unsigned int	number;
-	char			*value;
-}	t_dictionary;
-
-
-void				ft_putstr(char *str);
-long long			ft_atoi(char *str);
-void print_number(unsigned int num, t_dictionary *dictionary, int dictionary_len);
-#endif
+	int	i;
+	if(num == 0)
+		ft_putstr(dictionary[0].value);
+	while (num > 0)
+	{
+		i = dictionary_len;
+		while (num / dictionary[i].number < 1)
+		{
+			i--;
+		}
+		num = num - dictionary[i].number;
+		ft_putstr(dictionary[i].value);
+		ft_putstr(" ");
+	}
+	printf("\n");
+}
