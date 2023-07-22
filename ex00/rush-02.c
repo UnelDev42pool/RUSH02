@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush-02.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edi-iori <edi-iori@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 08:49:53 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 16:10:08 by edi-iori         ###   ########lyon.fr   */
+/*   Updated: 2023/07/22 17:25:46 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(int argc, char **argv)
 {
-	t_dictionary test[32];
+	t_dict test[32];
 	test[0].number = 0;
 	test[0].value = "zero";
 	test[1].number = 1;
