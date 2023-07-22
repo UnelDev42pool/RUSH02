@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush-02.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: edi-iori <edi-iori@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 08:49:53 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 17:25:46 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/22 17:51:06 by edi-iori         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ int	main(int argc, char **argv)
 	test[30].value = "million";
 	test[31].number = 1000000000;
 	test[31].value = "billion";
-	print_number(424242, test, 32);
+	print_number(1210, test, 31);
 	// int		value;
 	// char	*dict_file;
 
