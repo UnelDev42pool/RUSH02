@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 09:22:51 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 19:36:51 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/22 19:39:44 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ typedef struct s_dict
 
 void		ft_putstr(char *str);
 long long	ft_atoi(char *str);
+char		*ft_strjoin(int size, char **strs, char *sep);
 char		**ft_split(char *str, char *charset);
 void		print_number(unsigned int num, t_dict *dict, int dict_len);
 
