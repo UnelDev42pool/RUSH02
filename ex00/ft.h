@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: edi-iori <edi-iori@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 09:22:51 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 17:25:13 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/22 17:39:06 by edi-iori         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ typedef struct s_dict
 
 void				ft_putstr(char *str);
 long long			ft_atoi(char *str);
-void				print_number(unsigned int num, t_dict *dict, int dict_len);
+void				print_number(unsigned long num, t_dict *dict, int dict_len);
 
 #endif
