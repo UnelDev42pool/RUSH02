@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 09:22:51 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 13:18:02 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/22 13:27:56 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@ typedef struct s_dictionary
 
 
 void				ft_putstr(char *str);
-unsigned int		ft_atoi(char *str);
+long long			ft_atoi(char *str);
 
 #endif
