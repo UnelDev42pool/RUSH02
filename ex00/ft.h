@@ -6,14 +6,14 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 09:22:51 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 11:04:34 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/22 11:10:28 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_H
 # define FT_H
 
-void	ft_putstr(char *str);
-int		ft_atoi(char *str);
+void				ft_putstr(char *str);
+unsigned int		ft_atoi(char *str);
 
 #endif
