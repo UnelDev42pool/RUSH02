@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 15:47:19 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 16:21:43 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 16:27:32 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*free_2d(char **ptrs)
 	i = 0;
 	while (ptrs[i])
 		free(ptrs[i++]);
-	// free(ptrs[i]);
 	free(ptrs);
 	return (NULL);
 }
