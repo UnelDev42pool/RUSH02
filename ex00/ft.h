@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: edi-iori <edi-iori@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 09:22:51 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 09:33:58 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 14:14:24 by edi-iori         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ typedef struct s_dict
 	char		*str;
 }	t_dict;
 
+t_dict		*parse_dict(char *filename);
 void		ft_putstr(char *str);
 long long	ft_atoi(char *str);
 char		*ft_strjoin(int size, char **strs, char *sep);
