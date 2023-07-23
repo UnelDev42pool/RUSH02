@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 18:27:41 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 14:23:55 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 16:18:03 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_isspace(char c)
 
 long long	ft_atoi(char *str)
 {
-	unsigned long long	i;
+	long long	i;
 	long long			nbr;
 	int					sign;
 

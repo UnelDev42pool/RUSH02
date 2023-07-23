@@ -25,7 +25,7 @@ int	throw_error(char *message, int code)
 
 int	main(int argc, char **argv)
 {
-	unsigned long long	value;
+	long long	value;
 	char				*dict_filename;
 	t_dict				*dict;
 	int					dict_size;

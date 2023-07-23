@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edi-iori <edi-iori@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 14:11:33 by edi-iori          #+#    #+#             */
-/*   Updated: 2023/07/23 16:09:15 by edi-iori         ###   ########lyon.fr   */
+/*   Updated: 2023/07/23 16:18:03 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-void	print_obvious(unsigned long long num, t_dict *dict, int dic_len)
+void	print_obvious(long long num, t_dict *dict, int dic_len)
 {
 	int	i;
 
@@ -24,7 +24,7 @@ void	print_obvious(unsigned long long num, t_dict *dict, int dic_len)
 	ft_putstr(dict[i].str);
 }
 
-unsigned long long	intlen(unsigned long long n)
+long long	intlen(long long n)
 {
 	if (n < 0)
 		return (1 + intlen(-n));
@@ -34,7 +34,7 @@ unsigned long long	intlen(unsigned long long n)
 		return (1 + intlen(n / 10));
 }
 
-void	print_simple_number(unsigned long long num, t_dict *dict, int dict_len)
+void	print_simple_number(long long num, t_dict *dict, int dict_len)
 {
 	if (num <= 20)
 	{
@@ -62,7 +62,7 @@ void	print_simple_number(unsigned long long num, t_dict *dict, int dict_len)
 	}
 }
 
-int	too_big(unsigned long long num, t_dict *dict, int dict_len)
+int	too_big(long long num, t_dict *dict, int dict_len)
 {
 	int	i;
 
@@ -76,9 +76,9 @@ int	too_big(unsigned long long num, t_dict *dict, int dict_len)
 	return (1);
 }
 
-void	print_number(unsigned long long num, t_dict *dict, int dict_len)
+void	print_number(long long num, t_dict *dict, int dict_len)
 {
-	unsigned long long	length;
+	long long	length;
 
 	length = ft_iterative_power(10, (intlen(num) - 1) - (intlen(num) - 1) % 3);
 	if (too_big(length, dict, dict_len))
