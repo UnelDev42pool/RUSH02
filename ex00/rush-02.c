@@ -3,10 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rush-02.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: edi-iori <edi-iori@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 08:49:53 by deydoux           #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2023/07/23 15:29:26 by deydoux          ###   ########.fr       */
+=======
+/*   Updated: 2023/07/23 15:40:51 by edi-iori         ###   ########lyon.fr   */
+>>>>>>> c8ecb57799e6836a1743c09efd94200af662b2cf
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +25,10 @@ int	throw_error(char *message, int code)
 
 int	main(int argc, char **argv)
 {
-	int		value;
-	char	*dict_filename;
-	t_dict	*dict;
-	int		dict_size;
+	unsigned long long	value;
+	char				*dict_filename;
+	t_dict				*dict;
+	int					dict_size;
 
 	value = -1;
 	dict_filename = "numbers.dict";
