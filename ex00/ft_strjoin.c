@@ -6,11 +6,11 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/13 18:26:49 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 19:38:35 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 14:24:04 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "ft.h"
 
 unsigned int	ft_strlen(char *str)
 {

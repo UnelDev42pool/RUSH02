@@ -6,11 +6,11 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/09 18:27:41 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 13:22:12 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 14:23:55 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "ft.h"
 
 int	ft_isspace(char c)
 {

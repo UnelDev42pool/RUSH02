@@ -6,11 +6,11 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 09:23:04 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 09:24:27 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 14:23:57 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "ft.h"
 
 void	ft_putstr(char *str)
 {

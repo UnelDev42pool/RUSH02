@@ -6,11 +6,11 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/14 08:08:55 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 17:58:59 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 14:24:01 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "ft.h"
 
 int	contains(char *str, char c)
 {
