@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_file.c                                        :+:      :+:    :+:   */
+/*   read_lines.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 14:17:25 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 15:14:40 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 16:02:12 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,17 @@ char	*read_file(char *filename)
 	close(file);
 	str[len - 1] = 0;
 	return (str);
+}
+
+char	**read_lines(char *filename)
+{
+	char	*file;
+	char	**lines;
+
+	file = read_file(filename);
+	if (!file)
+		return (NULL);
+	lines = ft_split(file, "\n");
+	free(file);
+	return (lines);
 }

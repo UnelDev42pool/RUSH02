@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 08:49:53 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 15:21:55 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 15:29:26 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,5 @@ int	main(int argc, char **argv)
 	if (!dict)
 		return (throw_error("Dict Error", 1));
 	print_number(value, dict, dict_size);
+	free(dict);
 }
