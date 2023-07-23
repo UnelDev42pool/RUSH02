@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 13:32:16 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 20:44:19 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 09:29:12 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,22 @@ char	*read_file(char *filename)
 
 t_dict	parse_line(char *line)
 {
+	t_dict	element;
+	int		size;
 
+	line = ft_split(line, ": ");
+	if (!line)
+	{
+		element.str = 0;
+		return (element);
+	}
+	element.value = ft_atoi(line[0]);
+	line++;
+	size = 0;
+	while (line[size])
+		size++;
+	element.str = ft_strjoin(size, line, " ");
+	return (element);
 }
 
 t_dict	*parse_file(char *filename)
@@ -75,8 +90,10 @@ t_dict	*parse_file(char *filename)
 	dict = malloc(sizeof(t_dict) * size);
 	if (!dict)
 		return (NULL);
+	size = -1;
+	while (lines[++size])
+		dict[size] = parse_line(lines[size]);
 	dict[size - 1].str = 0;
-
 	return (dict);
 }
 
