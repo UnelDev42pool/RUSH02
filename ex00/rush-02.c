@@ -6,11 +6,18 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 08:49:53 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 15:06:37 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 15:21:55 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
+
+int	throw_error(char *message, int code)
+{
+	ft_putstr(message);
+	ft_putstr("\n");
+	return (code);
+}
 
 int	main(int argc, char **argv)
 {
@@ -29,15 +36,9 @@ int	main(int argc, char **argv)
 		value = ft_atoi(argv[2]);
 	}
 	if (value < 0)
-	{
-		ft_putstr("Error\n");
-		return (2);
-	}
+		return (throw_error("Error", 2));
 	dict = parse_dict(dict_filename, &dict_size);
 	if (!dict)
-	{
-		ft_putstr("Dict error\n");
-		return (1);
-	}
+		return (throw_error("Dict Error", 1));
 	print_number(value, dict, dict_size);
 }
