@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 09:22:51 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 16:18:03 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 16:21:55 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ long long	ft_atoi(char *str);
 char		*ft_strjoin(int size, char **strs, char *sep);
 char		**ft_split(char *str, char *charset);
 
-void		*free_2d(void **ptrs);
+void		*free_2d(char **ptrs);
 char		**read_lines(char *filename);
 t_dict		*parse_dict(char *filename, int *size);
 

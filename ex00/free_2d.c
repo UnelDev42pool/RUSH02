@@ -6,13 +6,13 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/23 15:47:19 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 16:10:11 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 16:21:43 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
 
-void	*free_2d(void **ptrs)
+void	*free_2d(char **ptrs)
 {
 	int	i;
 
