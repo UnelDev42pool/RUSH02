@@ -3,16 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   print_number.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: edi-iori <edi-iori@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 14:11:33 by edi-iori          #+#    #+#             */
-/*   Updated: 2023/07/23 16:18:03 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 16:43:30 by edi-iori         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft.h"
-#include <stdio.h>
-#include <unistd.h>
+
+long long	int_len(long long n)
+{
+	if (n < 0)
+		return (1 + int_len(-n));
+	else if (n < 10)
+		return (1);
+	else
+		return (1 + int_len(n / 10));
+}
 
 void	print_obvious(long long num, t_dict *dict, int dic_len)
 {
@@ -22,16 +30,6 @@ void	print_obvious(long long num, t_dict *dict, int dic_len)
 	while (num != dict[i].value && i < dic_len)
 		i++;
 	ft_putstr(dict[i].str);
-}
-
-long long	intlen(long long n)
-{
-	if (n < 0)
-		return (1 + intlen(-n));
-	else if (n < 10)
-		return (1);
-	else
-		return (1 + intlen(n / 10));
 }
 
 void	print_simple_number(long long num, t_dict *dict, int dict_len)
@@ -80,7 +78,7 @@ void	print_number(long long num, t_dict *dict, int dict_len)
 {
 	long long	length;
 
-	length = ft_iterative_power(10, (intlen(num) - 1) - (intlen(num) - 1) % 3);
+	length = ft_power(10, (int_len(num) - 1) - (int_len(num) - 1) % 3);
 	if (too_big(length, dict, dict_len))
 	{
 		ft_putstr("Dict Error\n");
