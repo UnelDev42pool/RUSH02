@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 09:22:51 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 14:32:19 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 14:34:41 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ typedef struct s_dict
 	char		*str;
 }	t_dict;
 
-t_dict		*parse_dict(char *filename);
 void		ft_putstr(char *str);
 long long	ft_atoi(char *str);
 char		*ft_strjoin(int size, char **strs, char *sep);
