@@ -6,11 +6,12 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 13:32:16 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/23 09:29:12 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 12:10:52 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <fcntl.h>
+#include <unistd.h>
 #include <stdlib.h>
 #include "ft.h"
 
@@ -57,49 +58,54 @@ char	*read_file(char *filename)
 t_dict	parse_line(char *line)
 {
 	t_dict	element;
-	int		size;
+	char	**segments;
 
-	line = ft_split(line, ": ");
-	if (!line)
+	segments = ft_split(line, ": ");
+	if (!segments)
 	{
-		element.str = 0;
+		element.value = -1;
 		return (element);
 	}
-	element.value = ft_atoi(line[0]);
-	line++;
-	size = 0;
-	while (line[size])
-		size++;
-	element.str = ft_strjoin(size, line, " ");
+	element.value = ft_atoi(segments[0]);
+	element.str = segments[1];
 	return (element);
 }
 
-t_dict	*parse_file(char *filename)
+t_dict	*parse_dict(char *filename)
 {
-	int		size;
+	char	*file_content;
 	char	**lines;
+	int		size;
 	t_dict	*dict;
 
-	lines = read_file(filename);
-	if (!lines)
+	file_content = read_file(filename);
+	if (!file_content)
 		return (NULL);
-	lines = ft_split(lines, "\n");
+	lines = ft_split(file_content, "\n");
 	size = 0;
 	while (lines[size])
 		size++;
-	dict = malloc(sizeof(t_dict) * size);
-	if (!dict)
-		return (NULL);
+	dict = malloc(sizeof(t_dict) * (size + 1));
 	size = -1;
 	while (lines[++size])
 		dict[size] = parse_line(lines[size]);
-	dict[size - 1].str = 0;
+	dict[size].str = NULL;
 	return (dict);
 }
 
+// #include <stdio.h>
+//
 // int	main(void)
 // {
-// 	t_dict	*dict;
+	// int		i;
+	// t_dict	*dict;
 
-// 	dict = parse_file("numbers.dict");
+	// dict = parse_dict("numbers.dict");
+	// i = 0;
+	// while (dict[i].str)
+	// {
+		// printf("%lld: %s\n", dict[i].value, dict[i].str);
+		// i++;
+	// }
 // }
+

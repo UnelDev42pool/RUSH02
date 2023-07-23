@@ -6,7 +6,7 @@
 /*   By: deydoux <deydoux@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/22 09:22:51 by deydoux           #+#    #+#             */
-/*   Updated: 2023/07/22 19:47:23 by deydoux          ###   ########.fr       */
+/*   Updated: 2023/07/23 09:33:58 by deydoux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 typedef struct s_dict
 {
-	unsigned int	value;
-	char			*str;
+	long long	value;
+	char		*str;
 }	t_dict;
 
 void		ft_putstr(char *str);
